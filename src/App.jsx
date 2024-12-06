@@ -3,6 +3,9 @@ import DescriptionCard from './descriptionCard.jsx';
 import Navbar from './navbar.jsx';
 import ImageContent from './imageContent';  // Assuming this is your image component
 import './App.css'; // Assuming you have the necessary styles
+import Podcast from './podcast.jsx';
+import Cookie from './cookie.jsx';
+
 
 const App = () => {
   // Predefined list of points with coordinates
@@ -29,6 +32,7 @@ const App = () => {
   const [card_x, setCardX] = useState(0);
   const [card_y, setCardY] = useState(0);
   const [navbarHeight, setNavbarHeight] = useState(0);
+  const [currentPage, setCurrentPage] = useState('acceuil');
 
   useEffect(() => {
     const handleClick = (e) => {
@@ -86,8 +90,10 @@ const App = () => {
 
   return (
     <>
-      <Navbar />
-      <div>
+      <Navbar setCurrentPage={setCurrentPage} />
+      {
+      currentPage=='acceuil'?<>
+        <div >
         <svg
           className='humanAnatomy'
           id="humanAnatomy"
@@ -151,7 +157,7 @@ const App = () => {
                 <button type="button" className="btn btn-success" onClick={handleFormSubmit}>
                   OK
                 </button>
-                <button type="button" className="btn btn-danger" onClick={handleFormCancel}>
+                <button type="button" className="btn btn-danger" onClick={handleFormCancel} style={{zIndex:"2005"}}>
                   Cancel
                 </button>
               </div>
@@ -167,7 +173,15 @@ const App = () => {
           </div>
         )}
       </div>
+      
       <DescriptionCard selectedPoint={selectedPoint} x={card_x} y={card_y} navbarHeight={navbarHeight} />
+      <Cookie  />
+      </>         : <>
+      <Podcast/>
+      
+      </>
+      }
+      
     </>
   );
 };

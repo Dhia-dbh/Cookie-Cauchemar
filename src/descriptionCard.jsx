@@ -7,7 +7,7 @@ const DescriptionCard = ({ selectedPoint, x, y, navbarHeight }) => {
     position: 'absolute',
     top: `${y == 0 ? 170 : y}px`,
     left: `${x == 0 ? 560 : x}px`,
-    zIndex: 9999,
+    zIndex: 2000,
   };
 
   return (

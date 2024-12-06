@@ -1,7 +1,9 @@
 body {
-  background-image: url('https://media.giphy.com/media/lSaWpGzw82UMcgHP6T/giphy.gif?cid=790b7611lp8omjzrivwh87glv4eufrmm4dk7wyrecxhw55pz&ep=v1_gifs_search&rid=giphy.gif&ct=g');
+  cursor: url('./assets/arrow.png') 35 35, auto; /* Use your custom cursor image */
+  background-image: url('https://img.freepik.com/free-photo/water-texture-background-blue-abstract-design_53876-145219.jpg?t=st=1733457922~exp=1733461522~hmac=e7d709e36a8bb0b814af62fb021beeb8ab54866b9bd331fb9110fbfa43ec29d0&w=1060');
   background-size: cover;
 }
+
 
 #root {
   max-width: 1280px;
@@ -60,3 +62,23 @@ body {
   background-size: 100% 100%;
   cursor: pointer;
 }
+.gradient-custom {
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to bottom, rgb(6, 63, 197), rgba(37, 117, 252, 0));
+}
+
+ .navbar {
+  width: 100%;
+display: flex;
+align-items: center;
+padding: 1rem;
+position: fixed;
+top: 0px;
+left: 0;
+
+}
+.navbar-nav  .nav-link {
+margin-left: 20px;  /* Adjust the space between each nav item */
+font-size: 1.5rem !important;
+}
+

@@ -1,0 +1,66 @@
+
+
+  
+  /* Centering the button using Flexbox */
+  .button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;  /* Full screen height */
+  }
+  
+  button {
+    padding: 15px 30px;
+    font-size: 16px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 2010;
+  }
+  button:hover{
+    cursor: url('./assets/arrow.png') 35 35, auto  !important;
+  }
+  /* Styling for the cancel button */
+  .cancel-button {
+    position: absolute;
+    pointer-events: auto; /* Allow click events on the button */
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    z-index: 2010; /* Lower z-index to make sure it stays below the fake pointers */
+    transition: top 1s ease, left 1s ease; /* Smooth transition for top and left properties */
+  }
+  
+  /* Styling for the "Are you sure?" button */
+  .confirm-button {
+    position: absolute;
+    pointer-events: auto; /* Allow click events on the button */
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    z-index: 2010; /* Ensure it's above the fake pointers */
+    transition: top 1s ease, left 1s ease; /* Smooth transition for top and left properties */
+  }
+  
+  /* Optional styling for the fake pointers */
+  .fake-pointer {
+    position: absolute;
+    z-index: 5000; /* Ensure fake pointers are above the cancel button */
+  }
+  
+  img {
+    pointer-events: none;
+  }
+  #cliquer {
+     top: 700px !important;
+     position: sticky;
+  }
+  

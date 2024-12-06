@@ -3,7 +3,7 @@
 
 import React, { useState } from 'react';
 import logoRaceForWater from './assets/race for water.jpg';
-const Navbar = () => {
+const Navbar = ({setCurrentPage}) => {
 
   const [isCollapsed, setIsCollapsed] = useState(true);
 
@@ -13,7 +13,7 @@ const Navbar = () => {
   return (
     <nav className="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
       <a className="nav-link disabled" href="#">
-        <img src={logoRaceForWater} width="40" height="40" alt="Logo" />
+        <img src={logoRaceForWater} width="50" height="50" alt="Logo" />
       </a>
       <button
         className="navbar-toggler"
@@ -30,10 +30,10 @@ const Navbar = () => {
         id="navbarNav"
       >
         <div className="navbar-nav">
-          <a className="nav-item nav-link active" href="#">
+          <a className="nav-item nav-link active" onClick={()=>{setCurrentPage('acceuil')}}>
             Accueil
           </a>
-          <a className="nav-item nav-link active" href="#">
+          <a className="nav-item nav-link active" href="#" onClick={()=>{setCurrentPage('podcast')}}>
             Podcast
           </a>
         </div>
